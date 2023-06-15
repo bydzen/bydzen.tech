@@ -36,3 +36,26 @@ a {
     color: inherit;
     text-decoration: underline;
 }
+
+embed {
+    width: 50rem;
+    border: 1px solid #202020;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: #fbfbfb;
+}
+@media (max-width: 842px) {
+    embed {
+        width: 30em;
+    }
+}
+@media (max-width: 512px) {
+    embed {
+        width: 20em;
+    }
+}
+@media (max-width: 350px) {
+    embed {
+        width: 10em;
+    }
+}
