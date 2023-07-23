@@ -2,13 +2,6 @@
     "hosting": {
         "site": "bydzen",
         "public": "public",
-        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-        "redirects": [
-            {
-                "source": "**",
-                "destination": "https://sultankautsar.com",
-                "type": 301
-            }
-        ]
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     }
 }
