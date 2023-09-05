@@ -13,104 +13,115 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <style>
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
       ::selection {
         color: #352f44;
         background-color: #b9b4c7;
       }
       body {
-        min-height: 100vh;
-        font-family: 'Nunito Sans', sans-serif;
-        font-weight: 600;
         display: flex;
         color: #352f44;
+        font-weight: 600;
+        min-height: 100vh;
         justify-content: center;
-        background-color: #faf0e6;
-        background-image: radial-gradient(#352f4450 1px, transparent 0);
         background-size: 32px 32px;
+        background-color: #faf0e6;
         background-position: -32px -32px;
+        font-family: 'Nunito Sans', sans-serif;
+        background-image: radial-gradient(#352f4450 1px, transparent 0);
       }
       main {
+        gap: 2rem;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
         padding: 1.25em;
         max-width: 720px;
-        gap: 2rem;
+        min-height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
       }
       .head {
         display: flex;
+        align-items: center;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
       }
       .head img {
-        border-radius: 100em;
-        max-width: 144px;
         width: 100%;
         cursor: help;
+        max-width: 144px;
+        border-radius: 100em;
       }
       .head h1 {
-        font-weight: 700;
         font-size: 2.5em;
+        font-weight: 700;
         text-align: center;
         font-family: 'Caveat', cursive;
-        text-shadow: 1px 1px 0px #faf0e6;
       }
       .head h2 {
-        font-size: 1.15em;
-        font-weight: 600;
-        text-align: center;
         color: #5c5470;
+        font-weight: 600;
+        font-size: 1.15em;
+        text-align: center;
       }
       .list ul {
-        list-style: none;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
         gap: 1.15em;
+        display: flex;
+        list-style: none;
         flex-wrap: wrap;
+        text-align: center;
+        flex-direction: column;
         justify-content: center;
       }
       .list a {
-        text-decoration: none;
-        color: #b9b4c7;
-        background-color: #352f44;
-        padding: 1.25em 4.25em;
-        border-radius: 0.75em;
-        transition: 0.35s all;
-        cursor: pointer;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        cursor: pointer;
+        color: #b9b4c7;
         position: relative;
+        align-items: center;
+        pointer-events: auto;
+        transition: 0.35s all;
+        border-radius: 0.75em;
+        text-decoration: none;
+        padding: 1.15em 4.25em;
+        justify-content: center;
+        background-color: #352f44;
       }
       .list a:hover {
         color: #faf0e6;
       }
       .list i[before] {
-        font-size: 1.5em;
-        position: absolute;
         top: 0.6em;
         left: 1.5em;
+        font-size: 1.5em;
+        position: absolute;
       }
       .list i[after] {
-        font-size: 1em;
-        position: absolute;
         top: 1.25em;
         right: 2.75em;
+        font-size: 1em;
+        position: absolute;
       }
       .foot p {
-        text-align: center;
+        z-index: 2;
         margin-bottom: 0;
+        position: relative;
+        text-align: center;
       }
       .list {
         width: 100%;
+      }
+      .shade {
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 4.5em;
+        position: fixed;
+        pointer-events: none;
+        background: linear-gradient(#faf0e600, #faf0e6aa);
       }
     </style>
   </head>
@@ -147,5 +158,6 @@
         <p>Copyright &copy; 2020 &dash; 2023 Sultan Kautsar. All Rights Reserved.</p>
       </div>
     </main>
+    <div class="shade"></div>
   </body>
 </html>
